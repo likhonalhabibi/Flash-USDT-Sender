@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Access Control Logic ---
     const checkAccess = () => {
-        const license = localStorage.getItem('usdtSenderLicense');
+        const license = localStorage.getItem('usdtsenderLicense');
         if (license) {
             const { expiry } = JSON.parse(license);
             if (new Date().getTime() < expiry) {
                 appContainer.classList.add('unlocked');
                 return true;
             } else {
-                localStorage.removeItem('usdtSenderLicense');
+                localStorage.removeItem('usdtsenderLicense');
             }
         }
         appContainer.classList.remove('unlocked');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const grantAccess = () => {
         const expiry = new Date().getTime() + (90 * 24 * 60 * 60 * 1000); // 90 days from now
         const license = { granted: true, expiry };
-        localStorage.setItem('usdtSenderLicense', JSON.stringify(license));
+        localStorage.setItem('usdtsenderLicense', JSON.stringify(license));
         checkAccess();
     };
 

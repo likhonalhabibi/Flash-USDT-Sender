@@ -2,19 +2,19 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #FFFFFF; /* White */
+    color: #232323; /* Black */
     line-height: 1.6;
 }
 
 h1, h2 {
     font-weight: 600;
-    color: #1a202c;
+    color: #232323; /* Black */
 }
 
 /* Header and Navigation */
 header {
-    background-color: #fff;
+    background-color: #FFFFFF; /* White */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem 5%;
     position: sticky;
@@ -54,27 +54,27 @@ nav ul li {
 
 nav ul a {
     text-decoration: none;
-    color: #4a5568;
+    color: #232323; /* Black */
     font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul a:hover {
-    color: #2b6cb0;
+    color: #009393; /* Aqua */
 }
 
 /* Hero Section */
 #hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(45deg, #2b6cb0, #4299e1);
-    color: white;
+    background: linear-gradient(45deg, #009393, #92DBD1); /* Aqua to Turquoise */
+    color: #FFFFFF; /* White */
 }
 
 #hero h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: white;
+    color: #FFFFFF; /* White */
 }
 
 #hero p {
@@ -83,8 +83,8 @@ nav ul a:hover {
 }
 
 .cta-button {
-    background-color: #38a169;
-    color: white;
+    background-color: #009393; /* Aqua */
+    color: #FFFFFF; /* White */
     border: none;
     padding: 12px 30px;
     font-size: 1rem;
@@ -95,7 +95,7 @@ nav ul a:hover {
 }
 
 .cta-button:hover {
-    background-color: #2f855a;
+    background-color: #D3B25B; /* Gold */
     transform: translateY(-2px);
 }
 
@@ -110,7 +110,7 @@ nav ul a:hover {
     position: relative;
     width: 100%;
     max-width: 500px;
-    background: #fff;
+    background: #FFFFFF; /* White */
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     padding: 2rem;
@@ -140,7 +140,7 @@ nav ul a:hover {
 
 #lock-overlay .fa-lock {
     font-size: 3rem;
-    color: #4a5568;
+    color: #232323; /* Black */
     margin-bottom: 1rem;
 }
 
@@ -164,7 +164,7 @@ input[type="text"] {
 #features {
     text-align: center;
     padding: 3rem 2rem;
-    background-color: #fff;
+    background-color: #f7fafc;
 }
 
 .features-grid {
@@ -178,7 +178,7 @@ input[type="text"] {
 }
 
 .feature-card {
-    background: #f7fafc;
+    background: #FFFFFF; /* White */
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -186,7 +186,7 @@ input[type="text"] {
 
 .feature-card i {
     font-size: 2.5rem;
-    color: #4299e1;
+    color: #009393; /* Aqua */
     margin-bottom: 1rem;
 }
 
@@ -214,8 +214,8 @@ input[type="text"] {
     height: 50px;
     line-height: 50px;
     border-radius: 50%;
-    background: #4299e1;
-    color: white;
+    background: #009393; /* Aqua */
+    color: #FFFFFF; /* White */
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -225,7 +225,7 @@ input[type="text"] {
 #pricing {
     text-align: center;
     padding: 3rem 2rem;
-    background-color: #fff;
+    background-color: #f7fafc;
 }
 
 .pricing-card {
@@ -260,7 +260,7 @@ input[type="text"] {
 }
 
 .pricing-card .fa-check-circle {
-    color: #38a169;
+    color: #009393; /* Aqua */
     margin-right: 10px;
 }
 
@@ -301,14 +301,14 @@ input[type="text"] {
 
 /* Footer */
 footer {
-    background-color: #1a202c;
-    color: white;
+    background-color: #232323; /* Black */
+    color: #FFFFFF; /* White */
     text-align: center;
     padding: 2rem 1rem;
 }
 
 .footer-content a {
-    color: #4299e1;
+    color: #009393; /* Aqua */
     text-decoration: none;
 }
 
@@ -319,7 +319,7 @@ footer {
 .social-links a {
     margin: 0 10px;
     font-size: 1.5rem;
-    color: white;
+    color: #FFFFFF; /* White */
 }
 
 /* Utility Classes */
