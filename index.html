@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash USDT Sender</title>
+    <meta property="og:title" content="Flash USDT Sender">
+    <meta property="og:description" content="A quick and secure way to send USDT to any Ethereum address.">
+    <meta property="og:image" content="https://public.bnbstatic.com/image/cms/blog/20210601/3dfb073b-fb58-44b1-8041-2126bd851063.png">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/USDT_Logo.png" alt="USDT Logo" class="logo">
+        <h1>Flash USDT Sender</h1>
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="senderInfo" class="hidden">
+            <p>Your address: <span id="userAddress"></span></p>
+            <p>USDT balance: <span id="usdtBalance"></span></p>
+        </div>
+        <div id="sendForm" class="hidden">
+            <input type="text" id="recipientAddress" placeholder="Recipient Address" required>
+            <input type="text" id="sendAmount" placeholder="Amount to send" required>
+            <button id="sendButton">Send USDT</button>
+        </div>
+        <p id="transactionStatus"></p>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
