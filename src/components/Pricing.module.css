@@ -1,0 +1,58 @@
+.pricing {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f7fafc;
+}
+
+.pricingCard {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.pricingCard h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #718096;
+}
+
+.pricingCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.pricingCard ul li {
+  margin-bottom: 1rem;
+}
+
+.ctaButton {
+  background-color: #009393;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.ctaButton:hover {
+  background-color: #D3B25B;
+  transform: translateY(-2px);
+}

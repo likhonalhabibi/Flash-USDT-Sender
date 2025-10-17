@@ -1,6 +1,6 @@
-# Flash USD₮ Sender - Official Application
+# Flash USD₮ Sender - Next.js & CSS Modules Edition
 
-**Flash USD₮ Sender** is a production-ready, secure, and intuitive web application for sending Tether (USD₮) to any Ethereum-compatible address. Built with modern web technologies and a focus on security and user experience, it provides a seamless bridge for interacting with the blockchain.
+**Flash USD₮ Sender** is a production-ready, secure, and intuitive web application for sending Tether (USD₮) to any Ethereum-compatible address. This project has been rebuilt using Next.js and CSS Modules for a modern, performant, and scalable architecture.
 
 **Live Application:** [flash-usdt-sender-official.netlify.app](https://flash-usdt-sender-official.netlify.app/)
 
@@ -8,38 +8,37 @@
 
 ## Key Features
 
+- **Built with Next.js**: A performant, server-rendered React application.
+- **CSS Modules**: Scoped CSS for a clean and maintainable styling solution.
 - **Secure Web3 Integration**: Connects directly to your browser-based Web3 wallet (e.g., MetaMask, Trust Wallet). Your private keys are never exposed.
 - **Instant Transactions**: Optimized to send USD₮ transactions to the blockchain quickly and efficiently.
 - **Real-Time Feedback**: Check your USD₮ balance and get immediate status updates on your transactions.
 - **Access Control System**: A simulated payment gateway demonstrates how users would purchase a license to access the application's core functionality.
-- **Professional UI/UX**: A clean, responsive, and branded interface for a trustworthy user experience.
 - **Advanced SEO**: Fully optimized for search engines with comprehensive meta tags and JSON-LD structured data for rich search results.
+- **Analytics & Performance Monitoring**: Integrated with Vercel Analytics and Speed Insights.
 
-## How It Works
+## Getting Started
 
-The application is designed to be straightforward. Here’s the user flow:
+To run this project locally, follow these steps:
 
-1.  **Purchase a License**: To access the sender functionality, users must first acquire a license via the "Get Access Now!" buttons. The application features a simulated payment modal to demonstrate this process.
-2.  **Unlock the Tool**: Upon "payment," a 90-day license is stored in the browser's `localStorage`, and the sender tool is unlocked.
-3.  **Connect Your Wallet**: Users click the "Connect Wallet" button to securely link their MetaMask or other Web3 wallet.
-4.  **Enter Details & Send**: Once connected, the user's address and USD₮ balance are displayed. They can then enter the recipient's address and the amount of USD₮ to send.
-5.  **Confirm Transaction**: Clicking "Send USD₮" prompts the user to confirm the transaction in their wallet, including gas fees.
-6.  **Receive Confirmation**: The application provides a status update once the transaction is successfully processed and confirmed on the blockchain.
-
-## Technical Stack
-
--   **Frontend**: HTML5, CSS3, JavaScript (ES6+)
--   **Blockchain Integration**: `ethers.js` for interacting with the Ethereum network and the USD₮ smart contract.
--   **SEO**: Comprehensive meta tags and `application/ld+json` structured data.
--   **Design**: Responsive design with Font Awesome for icons.
+1.  **Clone the repository.**
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## Deployment
 
-This application is built with static files (HTML, CSS, JS) and can be deployed on any static web hosting service.
+This application is optimized for deployment on [Vercel](https://vercel.com/), the platform from the creators of Next.js.
 
-1.  **Clone the repository.**
-2.  **Upload the files** to a hosting provider like Netlify, Vercel, or GitHub Pages.
-3.  **No build step is required.** The site is ready to be served as is.
+1.  **Push your code** to a Git repository (e.g., GitHub, GitLab).
+2.  **Import your project** into Vercel.
+3.  **Vercel will automatically** detect that you are using Next.js and will handle the build and deployment process for you.
 
 ## Disclaimer
 
