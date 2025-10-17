@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- DOM Element Selections ---
+    const appContainer = document.getElementById('app-container');
     const connectWalletBtn = document.getElementById('connectWallet');
     const sendButton = document.getElementById('sendButton');
     const senderInfo = document.getElementById('senderInfo');
@@ -9,10 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendAmountInput = document.getElementById('sendAmount');
     const transactionStatus = document.getElementById('transactionStatus');
 
+    // --- Modal and Access Control Elements ---
+    const paymentModal = document.getElementById('payment-modal');
+    const closeModalBtn = document.querySelector('.close-button');
+    const confirmPaymentBtn = document.getElementById('confirm-payment-button');
+    const getAccessButtons = [
+        document.getElementById('get-access-hero'),
+        document.getElementById('get-access-overlay'),
+        document.getElementById('get-access-pricing')
+    ];
+
+    // --- Ethers.js and Contract Details ---
     let provider;
     let signer;
     let usdtContract;
-
     const usdtAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7"; // Mainnet USDT
     const usdtAbi = [
         "function name() view returns (string)",
@@ -22,6 +34,41 @@ document.addEventListener('DOMContentLoaded', () => {
         "function transfer(address to, uint amount) returns (bool)",
     ];
 
+    // --- Access Control Logic ---
+    const checkAccess = () => {
+        const license = localStorage.getItem('usdtSenderLicense');
+        if (license) {
+            const { expiry } = JSON.parse(license);
+            if (new Date().getTime() < expiry) {
+                appContainer.classList.add('unlocked');
+                return true;
+            } else {
+                localStorage.removeItem('usdtSenderLicense');
+            }
+        }
+        appContainer.classList.remove('unlocked');
+        return false;
+    };
+
+    const grantAccess = () => {
+        const expiry = new Date().getTime() + (90 * 24 * 60 * 60 * 1000); // 90 days from now
+        const license = { granted: true, expiry };
+        localStorage.setItem('usdtSenderLicense', JSON.stringify(license));
+        checkAccess();
+    };
+
+    // --- Modal Handling ---
+    const openModal = () => paymentModal.classList.remove('hidden');
+    const closeModal = () => paymentModal.classList.add('hidden');
+
+    getAccessButtons.forEach(btn => btn.addEventListener('click', openModal));
+    closeModalBtn.addEventListener('click', closeModal);
+    confirmPaymentBtn.addEventListener('click', () => {
+        grantAccess();
+        closeModal();
+    });
+
+    // --- Wallet and Transaction Logic ---
     connectWalletBtn.addEventListener('click', async () => {
         if (typeof window.ethereum !== 'undefined') {
             try {
@@ -80,4 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Failed to update balance:", error);
         }
     }
+
+    // --- Initial Load ---
+    checkAccess();
 });
